@@ -20,10 +20,19 @@ public class FP01Functional {
         return number % 2 == 0;
     }
 
+    /* Lambda Expression
+    *
+    * instead of isEven method we can use lambda expression:
+    * parameter -> return statement
+    *
+    * number -> number%2 == 0
+    *
+    * */
+
     private static void printEvenNumbersInListStructured(List<Integer> numbers) {
 
         numbers.stream()
-                .filter(FP01Functional::isEven)  //Filter only even numbers
+                .filter(number -> number%2 == 0)  //Filter only even numbers with lambda expression
                 .forEach(System.out::println);   //Method Reference
 
     }
