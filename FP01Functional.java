@@ -4,8 +4,8 @@ public class FP01Functional {
     public static void main(String[] args) {
         List<Integer> numbers = List.of(12, 9, 13, 4, 6, 2, 4, 12, 15);
         //printAllNumbersInListFunctional(List.of(12, 9, 13, 4, 6, 2, 4, 12, 15));
-        //printEvenNumbersInListStructured(numbers);
-        printOddNumbersInListStructured(numbers);
+        //printEvenNumbersInListFunctional(numbers);
+        printOddNumbersInListFunctional(numbers);
     }
 /*
     private static void print(int number){
@@ -30,7 +30,7 @@ public class FP01Functional {
     *
     * */
 
-    private static void printEvenNumbersInListStructured(List<Integer> numbers) {
+    private static void printEvenNumbersInListFunctional(List<Integer> numbers) {
 
         numbers.stream()
                 .filter(number -> number%2 == 0)  //Filter only even numbers with lambda expression
@@ -38,7 +38,7 @@ public class FP01Functional {
 
     }
 
-    private static void printOddNumbersInListStructured(List<Integer> numbers) {
+    private static void printOddNumbersInListFunctional(List<Integer> numbers) {
 
         numbers.stream()
                 .filter(number -> number % 2 == 1)
